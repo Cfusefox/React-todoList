@@ -14,8 +14,6 @@ class Todo extends React.Component {
             "id": this.props.value.id,
             "content": this.props.value.content,
             "status": this.props.value.status
-        }).then((res) => {
-            console.log(res.data)
         })
     }
 

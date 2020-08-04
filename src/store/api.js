@@ -29,3 +29,10 @@ export function modifyTodo(id, todo) {
     data: todo
   })
 }
+
+export function getTodoListByMock() {
+  return axios({
+    method: 'get',
+    url: '120.0.0.1:3000/' + 'todoList'
+  })
+}
