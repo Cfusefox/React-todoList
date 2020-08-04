@@ -1,5 +1,6 @@
 import { connect } from 'react-redux'
 import { addTodo } from '../actions'
+import TodoForm from '../components/todoForm'
 
   
 const mapDispatchToProps = dispatch => {
@@ -11,9 +12,9 @@ const mapDispatchToProps = dispatch => {
   }
 }
   
-  const todoFormContainer = connect(
+  const TodoFormContainer = connect(
     null,
     mapDispatchToProps
-  )(todoForm)
+  )(TodoForm)
   
-  export default todoFormContainer
+  export default TodoFormContainer
