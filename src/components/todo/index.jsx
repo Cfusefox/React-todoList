@@ -17,7 +17,7 @@ class Todo extends React.Component {
     }
 
     deleteTodo = () => {
-        this.props.prop.deleteTodo(this.props.value)
+        this.props.prop.deleteTodo(this.props.index)
     }
 
     render() {
