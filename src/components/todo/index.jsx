@@ -1,5 +1,6 @@
 import React from 'react'
 import './index.css'
+import { deleteTodo, modifyTodo } from '../../store/api'
 
 
 class Todo extends React.Component {
@@ -9,10 +10,18 @@ class Todo extends React.Component {
 
     changeStatus = () => {
         this.props.prop.changeStatus(this.props.value.id)
+        modifyTodo(this.props.value.id, {
+            "id": this.props.value.id,
+            "content": this.props.value.content,
+            "status": this.props.value.status
+        }).then((res) => {
+            console.log(res.data)
+        })
     }
 
     deleteTodo = () => {
         this.props.prop.deleteTodo(this.props.value.id)
+        deleteTodo(this.props.value.id)
     }
 
     render() {

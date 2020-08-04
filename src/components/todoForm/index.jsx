@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { addTodo, getTodoList } from '../../store/api'
 
 class TodoForm extends React.Component {
 
@@ -18,10 +18,16 @@ class TodoForm extends React.Component {
 
     submit = () => {
         if(this.state.text!=''){
-            this.props.addTodo({
+            addTodo({
                 "id": Date.parse(new Date()),
                 "content": this.state.text,
                 "status": true
+            })
+            this.props.emptyTodo()
+            getTodoList().then((res) => {
+                res.data.map(item => {
+                    this.props.addTodo(item)
+                })
             })
         }
         document.getElementById("input").value = ''

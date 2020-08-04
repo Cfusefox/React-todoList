@@ -1,10 +1,21 @@
 import React from 'react'
 import Todo from '../todo'
+import { getTodoList } from '../../store/api'
 
 class TodoList extends React.Component {
 
     constructor(props) {
         super(props)
+    }
+
+    componentDidMount() {
+        if(this.props.value.length == 0) {
+            getTodoList().then((res) => {
+                res.data.map(item => {
+                    this.props.addTodo(item)
+                })
+            })
+        }
     }
 
     render() {

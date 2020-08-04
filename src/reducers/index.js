@@ -4,14 +4,16 @@ export default (state = [], action) => {
             return [ ...state, action.value ]
         case "DELETE_TODO":
             return [ ...state ].filter((item) => item.id != action.id)
-            case "CHANGE_STATUS":
-                let stateCopy = [ ...state ]
-                stateCopy.map(item => {
-                    if(item.id == action.id) {
-                        return item.status = !item.status
-                    }
-                })
-            return [ ...stateCopy ]
+        case "CHANGE_STATUS":
+            let stateCopy = [ ...state ]
+            stateCopy.map(item => {
+                if(item.id == action.id) {
+                    return item.status = !item.status
+                }
+            })
+        return [ ...stateCopy ]
+        case "EMPTY_TODO":
+            return []
         default:
             return state
    }

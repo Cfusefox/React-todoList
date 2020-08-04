@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import TodoList from '../components/todoList'
-import { deleteTodo, changeStatus } from '../actions/index'
+import { deleteTodo, changeStatus, addTodo } from '../actions/index'
 
 const mapStateToProps = state => {
     return {
@@ -10,6 +10,9 @@ const mapStateToProps = state => {
 
   const mapDispatchToProps = dispatch => {
     return {
+      addTodo: (value) => {
+        dispatch(addTodo(value))
+      },
       deleteTodo: (id) => {
           dispatch(deleteTodo(id))
       },
