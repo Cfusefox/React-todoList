@@ -5,24 +5,19 @@ import './index.css'
 class Todo extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {
-            status: false
-        }
     }
 
     changeStatus = () => {
-        this.setState({
-            status: !this.state.status
-        })
+        this.props.prop.changeStatus(this.props.value.id)
     }
 
     deleteTodo = () => {
-        this.props.prop.deleteTodo(this.props.index)
+        this.props.prop.deleteTodo(this.props.value.id)
     }
 
     render() {
        return <div>
-            <li onClick={this.changeStatus} className={this.state.status?'done':'not-done'}>{ this.props.value }</li>
+            <li onClick={this.changeStatus} className={this.props.value.status?'not-done':'done'}>{ this.props.value.content }</li>
             <button onClick={this.deleteTodo}>X</button>
        </div>
     }

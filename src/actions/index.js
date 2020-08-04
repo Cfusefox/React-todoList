@@ -6,3 +6,7 @@ export const deleteTodo = (id) => ({
     type: "DELETE_TODO",
     id: id
 })
+export const changeStatus = (id) => ({
+    type: "CHANGE_STATUS",
+    id: id
+})

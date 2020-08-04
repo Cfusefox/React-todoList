@@ -3,6 +3,12 @@ import { addTodo } from '../actions'
 import TodoForm from '../components/todoForm'
 
   
+const mapStateToProps = state => {
+    return {
+      value: state
+    }
+  }
+
 const mapDispatchToProps = dispatch => {
   return {
     addTodo: (value) => {
@@ -12,7 +18,7 @@ const mapDispatchToProps = dispatch => {
 }
   
   const TodoFormContainer = connect(
-    null,
+    mapStateToProps,
     mapDispatchToProps
   )(TodoForm)
   
