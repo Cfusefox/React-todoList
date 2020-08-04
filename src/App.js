@@ -11,12 +11,12 @@ function App() {
     <Router>
       <div className="App">
         <header className="App-header">
-        <ul>
+          <ul>
             <li>
-              <Link to="/">  TODOLIST  </Link>
+              <Link to="/">  TODOLIST      </Link>
             </li>
             <li>
-              <Link to="/done">  DONELIST </Link>
+              <Link to="/done">   DONELIST </Link>
             </li>
             <li>
               <Link to="/undone">  UNDONELIST </Link>

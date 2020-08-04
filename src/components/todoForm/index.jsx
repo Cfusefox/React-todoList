@@ -1,5 +1,6 @@
 import React from 'react'
 import { addTodo, getTodoList } from '../../store/api'
+import './index.css'
 
 class TodoForm extends React.Component {
 
@@ -22,11 +23,12 @@ class TodoForm extends React.Component {
                 "id": Date.parse(new Date()),
                 "content": this.state.text,
                 "status": true
-            })
-            this.props.emptyTodo()
-            getTodoList().then((res) => {
-                res.data.map(item => {
-                    this.props.addTodo(item)
+            }).then(() => {
+                this.props.emptyTodo()
+                getTodoList().then((res) => {
+                    res.data.map(item => {
+                        this.props.addTodo(item)
+                    })
                 })
             })
         }
@@ -37,9 +39,9 @@ class TodoForm extends React.Component {
     }
 
     render() {
-        return <div>
+        return <div className="form">
                 <input type="text" value={this.state.value} onChange={this.onChange} placeholder="add todo" id="input"/>
-                <button onClick={this.submit}>add</button>
+                <div onClick={this.submit} className="add-button">+</div>
         </div>
     }
 

@@ -25,9 +25,9 @@ class Todo extends React.Component {
     }
 
     render() {
-       return <div>
+       return <div className="todo">
             <li onClick={this.changeStatus} className={this.props.value.status?'not-done':'done'}>{ this.props.value.content }</li>
-            <button onClick={this.deleteTodo}>X</button>
+            <div onClick={this.deleteTodo} className="delete-button">X</div>
        </div>
     }
 
