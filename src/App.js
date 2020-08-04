@@ -11,7 +11,7 @@ function App() {
     <Router>
       <div className="App">
         <header className="App-header">
-          <ul>
+          <ul className="navigation">
             <li>
               <Link to="/">  TODOLIST      </Link>
             </li>

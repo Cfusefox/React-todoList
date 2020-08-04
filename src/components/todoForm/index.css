@@ -1,6 +1,6 @@
 #input {
   height: 40px;
-  width: 400px;
+  width: 500px;
   border: none;
   outline: none;
   padding-left: 10px;
@@ -13,7 +13,7 @@
   border-radius: 5px;
   align-items: center;
   height: 50px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 .add-button {
   height: 100%;

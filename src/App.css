@@ -37,3 +37,11 @@
 a {
   text-decoration: none;
 }
+
+.navigation {
+  display: flex;
+  width: 500px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+}
