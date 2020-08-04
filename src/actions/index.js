@@ -1,4 +1,4 @@
 export const addTodo = (value) => ({
-    type: "ADD",
+    type: "ADD_TODO",
     value: value
 })

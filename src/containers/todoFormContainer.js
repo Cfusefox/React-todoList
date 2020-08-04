@@ -7,8 +7,7 @@ const mapDispatchToProps = dispatch => {
   return {
     addTodo: (value) => {
         dispatch(addTodo(value))
-    },
-    
+    }
   }
 }
   

@@ -10,16 +10,25 @@ class TodoForm extends React.Component {
         }
     }
 
+    onChange = (e) => {
+        this.setState({
+            text: e.target.value
+        })
+    }
+
     submit = () => {
+        if(this.state.text!='')
         this.props.addTodo(this.state.text)
+        document.getElementById("input").value = ''
+        this.setState({
+            text: ''
+        })
     }
 
     render() {
         return <div>
-            <form onSubmit={this.submit}>
-                <input type="text" value={this.state.value} placeholder="add todo"/>
-                <button type="submit">add</button>
-            </form>
+                <input type="text" value={this.state.value} onChange={this.onChange} placeholder="add todo" id="input"/>
+                <button onClick={this.submit}>add</button>
         </div>
     }
 

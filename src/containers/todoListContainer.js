@@ -3,12 +3,12 @@ import TodoList from '../components/todoList'
 
 const mapStateToProps = state => {
     return {
-      value: state.value
+      value: state
     }
   }
   
-  const TodoListContainer = connect(
+const TodoListContainer = connect(
     mapStateToProps
-  )(TodoList)
-  
-  export default TodoListContainer
+)(TodoList)
+
+export default TodoListContainer
