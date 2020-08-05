@@ -18,7 +18,7 @@ class TodoList extends React.Component {
         }) */
         if(this.props.value.length == 0) {
             getTodoList().then((res) => {
-                res.data.map(item => {
+                res.data.forEach(item => {
                     this.props.addTodo(item)
                 })
             })

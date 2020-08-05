@@ -6,6 +6,9 @@ import UndoneListContainer from './containers/undoneListContainer'
 import DoneListContainer from './containers/doneListContainer'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
+/* hashrouter */
+
+
 function App() {
   return (
     <Router>
@@ -22,10 +25,12 @@ function App() {
               <Link to="/undone">  UNDONELIST </Link>
             </li>
           </ul>
-          <TodoFormContainer />
-          <Route path="/" exact component={TodoListContainer} />  
-          <Route path="/done" exact component={DoneListContainer} />  
-          <Route path="/undone" exact component={UndoneListContainer} />  
+          <div className="content">
+            <TodoFormContainer />
+            <Route path="/" exact component={TodoListContainer} />  
+            <Route path="/done" exact component={DoneListContainer} />  
+            <Route path="/undone" exact component={UndoneListContainer} />  
+          </div>
         </header>
       </div>
     </Router>

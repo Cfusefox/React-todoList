@@ -2,35 +2,66 @@
     text-decoration:line-through;
     flex: 730px;
     color: #666;
+    cursor: pointer;
+    line-height: 22px;
+    width: 95%;
+    height: 74%;
+    bottom: 2px;
+    left: 10px;
+    position: absolute;
+    overflow: scroll;
+    text-overflow: ellipsis;
+}
+.done::-webkit-scrollbar {
+    display:none
+}
+.not-done::-webkit-scrollbar {
+    display:none
 }
 .not-done {
     flex: 730px;
     color: #666;
+    cursor: pointer;
+    line-height: 30px;
+    width: 95%;
+    height: 74%;
+    bottom: 2px;
+    left: 10px;
+    position: absolute;
+    overflow: scroll;
+    text-overflow: ellipsis;
 }
-li {
-    list-style-type:none;
-    display: inline;
-}
+
 .todo {
     border: 1px solid #aaa;
     margin-bottom: 15px;
-    width: 800px;
-    height: 80px;
+    width: 250px;
+    height: 200px;
     line-height: 16px;
     border-radius: 5px;
     box-shadow: 2px 2px 6px #999;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    margin: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .delete-button {
-    width: 70px;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ccc;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    color: #999;
+    color: #ccc;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 22px;
 }
+.delete-button:hover {
+    color: red;
+}
+

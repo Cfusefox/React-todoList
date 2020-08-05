@@ -1,5 +1,6 @@
 import React from 'react'
 import Todo from '../todo'
+import './index.css'
 
 class UndoneList extends React.Component {
 
@@ -8,7 +9,7 @@ class UndoneList extends React.Component {
     }
 
     render() {
-        return <div>
+        return <div className="todo-list">
             { this.props.value.filter(item => item.status == true).map((item, index) => <Todo key={index} value={item} prop={this.props}/>) }
         </div>
     }

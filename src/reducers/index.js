@@ -5,8 +5,9 @@ export default (state = [], action) => {
         case "DELETE_TODO":
             return [ ...state ].filter((item) => item.id != action.id)
         case "CHANGE_STATUS":
+            //todo change map use method
             let stateCopy = [ ...state ]
-            stateCopy.map(item => {
+            stateCopy.forEach(item => {
                 if(item.id == action.id) {
                     return item.status = !item.status
                 }

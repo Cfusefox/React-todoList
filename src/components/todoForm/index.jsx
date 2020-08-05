@@ -20,16 +20,10 @@ class TodoForm extends React.Component {
     submit = () => {
         if(this.state.text!=''){
             addTodo({
-                "id": Date.parse(new Date()),
                 "content": this.state.text,
                 "status": true
-            }).then(() => {
-                this.props.emptyTodo()
-                getTodoList().then((res) => {
-                    res.data.map(item => {
-                        this.props.addTodo(item)
-                    })
-                })
+            }).then((res) => {
+                this.props.addTodo(res.data)
             })
         }
         document.getElementById("input").value = ''

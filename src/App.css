@@ -40,8 +40,37 @@ a {
 
 .navigation {
   display: flex;
-  width: 500px;
-  justify-content: space-around;
+  width: 15%;
+  margin: 0;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: url(http://120.79.202.42:8081/loveimages/theMilkyWay.gif);
   align-items: center;
   padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+.navigation li {
+  height: 80px;
+  width: 100%;
+  border-bottom: 1px solid #aaa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #444;
+  font-size: 22px;
+  font-weight: bold;
+}
+a:visited {
+  color: white;
+}
+.content {
+  width: 83%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  overflow: scroll;
 }
