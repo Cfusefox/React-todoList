@@ -1,23 +1,25 @@
 import axios from 'axios'
 
+const URL = 'http://localhost:8088/todo'
+
 export function getTodoList() {
   return axios({
     method: 'get',
-    url: 'https://5e9ec500fb467500166c4658.mockapi.io/todos'
+    url: URL
   })
 }
 
 export function deleteTodo(id) {
   return axios({
     method: 'delete',
-    url: `https://5e9ec500fb467500166c4658.mockapi.io/todos/${id}`
+    url: `${URL}/${id}`
   })
 }
 
 export function addTodo(todo) {
   return axios({
     method: 'post',
-    url: `https://5e9ec500fb467500166c4658.mockapi.io/todos`,
+    url: URL,
     data: todo
   })
 }
@@ -25,7 +27,7 @@ export function addTodo(todo) {
 export function modifyTodo(id, todo) {
   return axios({
     method: 'put',
-    url: `https://5e9ec500fb467500166c4658.mockapi.io/todos/${id}`,
+    url: `${URL}/${id}`,
     data: todo
   })
 }

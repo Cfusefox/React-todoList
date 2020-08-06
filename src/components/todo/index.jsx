@@ -1,5 +1,5 @@
 import React from 'react'
-import './index.css'
+import './index.scss'
 import { deleteTodo, modifyTodo } from '../../store/api'
 import '../../css/icon.css'
 
@@ -14,7 +14,7 @@ class Todo extends React.Component {
         modifyTodo(this.props.value.id, {
             "id": this.props.value.id,
             "content": this.props.value.content,
-            "status": this.props.value.status
+            "status": !this.props.value.status
         }).then(() => {
             this.props.prop.changeStatus(this.props.value.id)
         })

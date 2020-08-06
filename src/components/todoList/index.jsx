@@ -1,7 +1,7 @@
 import React from 'react'
 import Todo from '../todo'
 import { getTodoList, getTodoListByMock} from '../../store/api'
-import './index.css'
+import './index.scss'
 import '../../mock'
 
 class TodoList extends React.Component {

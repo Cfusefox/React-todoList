@@ -1,6 +1,6 @@
 import React from 'react'
 import { addTodo, getTodoList } from '../../store/api'
-import './index.css'
+import './index.scss'
 
 class TodoForm extends React.Component {
 

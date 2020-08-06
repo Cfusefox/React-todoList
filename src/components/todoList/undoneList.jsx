@@ -1,6 +1,6 @@
 import React from 'react'
 import Todo from '../todo'
-import './index.css'
+import './index.scss'
 
 class UndoneList extends React.Component {
 
